@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php require_once "config.php"; ?>
 <html>
   <head>
     <!--Import Google Icon Font-->
@@ -16,37 +17,9 @@
       <li><a id="white">Blanc</a></li>
       <li><a id="grey">Gris</a></li>
     </ul>
-    <nav>
-      <div class="nav-wrapper ">
-        <a href="#!" class="brand-logo">Nos projets</a>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="index.html"><i class="material-icons">home</i>Acceuil</a></li>
-          <li><a href="project-1.html" target="_blank" >Projet 1</a></li>
-          <li><a href="project-2.html" target="_blank">Projet 2</a></li>
-          <li><a href="project-3.html" target="_blank">Projet 3</a></li>
-          <!-- Dropdown Trigger -->
-          <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Couleur<i class="material-icons right">arrow_drop_down</i></a></li>
-        </ul>
-      </div>
-    </nav>
-    <ul id="slide-out" class="sidenav">
-      <li>
-        <div class="user-view">
-          <div class="background">
-            <img class="sidenav-img" src="../Projet2/img/idee1.jpg">
-          </div>
-          <a href="#name"><span class="white-text name">John Doe</span></a>
-          <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
-        </div>
-      </li>
-      <li><a class="waves-effect" href="index.html"><i class="material-icons">home</i>Acceuil</a></li>
-      <li><a class="waves-effect" href="project-1.html" target="_blank">Projet 1</a></li>
-      <li><a class="waves-effect" href="project-2.html" target="_blank">Projet 2</a></li>
-      <li><a class="waves-effect" href="project-3.html" target="_blank">Projet 3</a></li>
-      <!-- Dropdown Trigger -->
-      <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Couleur<i class="material-icons right">arrow_drop_down</i></a></li>
-    </ul>
-    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+    <?php require "menu.php"; ?>
+
     <div class="carousel carousel-slider center">
       <div class="carousel-item background1 white-text" href="#one!">
         <h2>1er projet</h2>
@@ -96,11 +69,11 @@
       <div class="container">
         <div class="row">
           <div class="col l6 s12">
-            <h5 class="white-text">Bas de Page</h5>
+            <h2 class="white-text">Bas de Page</h2>
             <p class="grey-text text-lighten-4">Merci d'avoir été sur cette Page.</p>
           </div>
           <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Liens</h5>
+            <h2 class="white-text">Liens</h2>
             <ul>
               <li><a class="grey-text text-lighten-3"href="index.html">Acceuil</a></li>
               <li><a class="grey-text text-lighten-3" href="project-1.html" target="_blank">Projet 1</a></li>
