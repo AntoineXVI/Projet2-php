@@ -1,3 +1,11 @@
+<?php require_once "config.php"; ?>
+
+<!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+      <li><a id="black">Noir</a></li>
+      <li><a id="white">Blanc</a></li>
+      <li><a id="grey">Gris</a></li>
+</ul>
 <nav>
     <div class="nav-wrapper ">
     <a href="#!" class="brand-logo">Nos projets</a>

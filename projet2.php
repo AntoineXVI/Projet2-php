@@ -11,15 +11,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
     <body id="color">
-        <!-- Dropdown Structure -->
-        <ul id="dropdown1" class="dropdown-content">
-           <li><a id="black">Noir</a></li>
-           <li><a id="white">Blanc</a></li>
-           <li><a id="grey">Gris</a></li>
-        </ul>
         
         <?php require "menu.php"; ?>
-        
+
         <h1 class="title-projet">Projet 2: création d'un jeu</h1>
         <div class="row">
             <div class="col img s3 offset-s2">
@@ -37,7 +31,7 @@
                     <div class="col l4 offset-l2 s12">
                         <h2 class="white-text">Liens</h2>
                         <ul>
-              <li><a class="grey-text text-lighten-3" href="index.html">Acceuil</a></li>
+                            <li><a class="grey-text text-lighten-3" href="index.html">Acceuil</a></li>
                             <li><a class="grey-text text-lighten-3" href="project-1.html" target="_blank">Projet 1</a></li>
                             <li><a class="grey-text text-lighten-3" href="project-2.html" target="_blank">Projet 2</a></li>
                             <li><a class="grey-text text-lighten-3" href="project-3.html" target="_blank">Projet 3</a></li>

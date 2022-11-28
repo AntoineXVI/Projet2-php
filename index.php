@@ -11,12 +11,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
   <body id="color">
-    <!-- Dropdown Structure -->
-    <ul id="dropdown1" class="dropdown-content">
-      <li><a id="black">Noir</a></li>
-      <li><a id="white">Blanc</a></li>
-      <li><a id="grey">Gris</a></li>
-    </ul>
 
     <?php require "menu.php"; ?>
 

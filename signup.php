@@ -2,6 +2,7 @@
 $sql = "INSERT INTO user(email,password,login) VALUES(:email,:password,:login)";
 $dataBinded=array(
     ':email'   => $_POST['email'],
+    ':firstName'   => $_POST['firstName'],
     ':password'=> $_POST['password'],
     ':login'=> $_POST['login']
 );
