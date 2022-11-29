@@ -14,22 +14,6 @@
  
   <?php require "menu.php"; ?>
 
-  <h1>Connexion</h1>
-  <form method="post" action="action/login.php">
-    <input type='email' name='email' />
-    <input type='password' name='password' />
-    <input type='submit' value='Me connecter' />
-  </form>
-
-  <h2>Inscription</h2>
-<form method="post" action="action/signup.php">
-    <input type='email' name='email' />
-    <input type='password' name='password' />
-    <input type='text' name='login' />
-    <input type='submit' value='Me connecter' />
-</form>
-  
-
     <div class="carousel carousel-slider center">
       <div class="carousel-item background1 white-text" href="#one!">
         <h2>1er projet</h2>
