@@ -11,24 +11,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
   <body id="color">
- 
-  <?php require "menu.php"; ?>
 
-  <h1>Connexion</h1>
-  <form method="post" action="action/login.php">
-    <input type='email' name='email' />
-    <input type='password' name='password' />
-    <input type='submit' value='Me connecter' />
-  </form>
+    <?php require "menu.php"; ?>
 
-  <h2>Inscription</h2>
-<form method="post" action="action/signup.php">
-    <input type='email' name='email' />
-    <input type='password' name='password' />
-    <input type='text' name='login' />
-    <input type='submit' value='Me connecter' />
-</form>
-  
+    <h1>Liste des utilisateurs</h1>
+   <?php
+   $sql = "SELECT * FROM user"; 
+   $pre = $pdo->prepare($sql); 
+   $pre->execute();
+   $data = $pre->fetchAll(PDO::FETCH_ASSOC);
+   
+   foreach($data as $user){ ?>
+   <div class="bloc_user">
+     <h2><?php echo $user['first_name']." ".$user['last_name'] ?></h2>
+     <span class="email"><?php echo $user['email'] ?></span>
+   </div>
+   <?php } ?>
 
     <div class="carousel carousel-slider center">
       <div class="carousel-item background1 white-text" href="#one!">
@@ -44,7 +42,7 @@
         <p class="white-text">Clique pour voir notre 3eme projet</p>
       </div>
     </div>
-    <h1 class="title-index">A propos de nous :</h1>
+    <h2 class="title-index">A propos de nous :</h2>
     <div class="row">
       <div class="col antoine s3 offset-s2">
         <p>Présentation de Antoine Pichard</p>
