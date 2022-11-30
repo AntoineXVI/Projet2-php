@@ -18,7 +18,7 @@
   echo "<h2>bienvenue </h2>";
   echo "<h2><a href='admin.php' >admin</a></h2>";
   }
-?>
+  ?>
 
     <div class="carousel carousel-slider center">
       <div class="carousel-item background1 white-text" href="#one!">

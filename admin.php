@@ -31,15 +31,53 @@ if(!isset($_SESSION['user']['admin']) || $_SESSION['user']['admin']==0){
     foreach($data as $user){ ?>
     <div class="bloc_user">
       <h2><?php echo $user['name'] ?></h2>
+      <form method="post" action="action/update_user.php">
+        <input type='name' name='name' placeholder="nouveau nom"/>
+        <input type='hidden' name='id' />
+        <input type='submit' value='Modifier' />
+      </form>
       <span class="email"><?php echo $user['email'] ?></span>
+      <form method="post" action="action/update_user.php">
+        <input type='name' name='email' placeholder="nouvel email"/>
+        <input type='hidden' name='id' />
+        <input type='submit' value='Modifier' />
+      </form>
     </div>
     <?php } ?>
 
-    <form method="post" action="action/update_user.php">
-    <input type='name' name='name' value="<?php echo "$_POST ['name']"?>" />
-    <input type='hidden' name='id' value="<?php echo "$_POST ['id']"?>" />
-    <input type='submit' value='Modifier' />
-</form>
+    <h1>Liste des projets</h1>
+
+    <?php
+    $sql = "SELECT * FROM projects"; 
+    $pre = $pdo->prepare($sql); 
+    $pre->execute();
+    $data = $pre->fetchAll(PDO::FETCH_ASSOC);
+    
+    foreach($data as $projects){ ?>
+    <div class="bloc_user">
+      <h2><?php echo $projects['name'] ?></h2>
+      <form method="post" action="action/update_project.php">
+        <input type='name' name='name' placeholder="nouveau nom"/>
+        <input type='hidden' name='id' />
+        <input type='submit' value='Modifier' />
+      </form>
+      <span class="name"><?php echo $projects['h1'] ?></span>
+      <form method="post" action="action/update_project.php">
+        <input type='name' name='h1' placeholder="nouveau titre"/>
+        <input type='hidden' name='id' />
+        <input type='submit' value='Modifier' />
+      </form>
+    </div>
+    <?php } ?>
+
+    <h1>creer un projet</h1>
+    <form method="post" action="action/create_project.php">
+    <input type='name' name='name' placeholder="Entrez le nom" />
+    <input type='name' name='h1' placeholder="Entrez un titre"/>
+    <form method="post" action="upload_file.php" enctype="multipart/form-data">
+    <input type='file' name='image' value="null">
+    <input type='submit' value='creer projet' />
+  </form>
 
     <div class="carousel carousel-slider center">
       <div class="carousel-item background1 white-text" href="#one!">
