@@ -6,3 +6,10 @@
     <input type='password' name='password' placeholder="Entrez un mot de passe"/>
     <input type='submit' value='Me connecter' />
   </form>
+
+<?php
+if( isset($_SESSION['error'])){
+  echo $_SESSION['error'];
+  unset($_SESSION['error']);
+}
+?>

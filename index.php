@@ -12,7 +12,13 @@
   </head>
   <body id="color">
  
-  <?php require "menu.php"; ?>
+  <?php require "menu.php";
+
+  if(isset($_SESSION['user']['admin']) && $_SESSION['user']['admin']==1){
+  echo "<h2>bienvenue </h2>";
+  echo "<h2><a href='admin.php' >admin</a></h2>";
+  }
+?>
 
     <div class="carousel carousel-slider center">
       <div class="carousel-item background1 white-text" href="#one!">
@@ -69,10 +75,10 @@
           <div class="col l4 offset-l2 s12">
             <h2 class="white-text">Liens</h2>
             <ul>
-              <li><a class="grey-text text-lighten-3"href="index.html">Acceuil</a></li>
-              <li><a class="grey-text text-lighten-3" href="project-1.html" target="_blank">Projet 1</a></li>
-              <li><a class="grey-text text-lighten-3" href="project-2.html" target="_blank">Projet 2</a></li>
-              <li><a class="grey-text text-lighten-3" href="project-3.html" target="_blank">Projet 3</a></li>
+              <li><a class="grey-text text-lighten-3"href="index.php">Acceuil</a></li>
+              <li><a class="grey-text text-lighten-3" href="project-1.php" target="_blank">Projet 1</a></li>
+              <li><a class="grey-text text-lighten-3" href="project-2.php" target="_blank">Projet 2</a></li>
+              <li><a class="grey-text text-lighten-3" href="project-3.php" target="_blank">Projet 3</a></li>
             </ul>
           </div>
         </div>

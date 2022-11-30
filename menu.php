@@ -11,22 +11,18 @@
     <div class="nav-wrapper ">
     <a href="#!" class="brand-logo">Nos projets</a>
     <ul class="right hide-on-med-and-down">
-        <li><a href="index.html"><i class="material-icons">home</i>Acceuil</a></li>
-        <li><a href="project-1.html"  >Projet 1</a></li>
-        <li><a href="project-2.html" >Projet 2</a></li>
-        <li><a href="project-3.html" >Projet 3</a></li>
+        <li><a href="index.php"><i class="material-icons">home</i>Acceuil</a></li>
+        <li><a href="project-1.php"  >Projet 1</a></li>
+        <li><a href="project-2.php" >Projet 2</a></li>
+        <li><a href="project-3.php" >Projet 3</a></li>
         <!-- Dropdown Trigger -->
         <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Couleur<i class="material-icons right">arrow_drop_down</i></a></li>
         <?php
         if (isset($_SESSION['user'])){
-        ?>
-        <li><a href="connexion.php" >Se connecter</a></li>
-        <li><a href="inscription.php" >s'inscrire</a></li>
-        <?php
+          echo "<li><a href='action/logout.php' >se deconnecter</a></li>";
         }else{
-          ?>
-          <li><a href="logout.php" >se deconnecter</a></li>
-        <?php
+          echo "<li><a href='connexion.php' >Se connecter</a></li>";
+          echo "<li><a href='inscription.php' >s'inscrire</a></li>";
         }
         ?>
     </ul>
@@ -42,10 +38,10 @@
           <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
         </div>
       </li>
-      <li><a class="waves-effect" href="index.html"><i class="material-icons">home</i>Acceuil</a></li>
-      <li><a class="waves-effect" href="project-1.html" target="_blank">Projet 1</a></li>
-      <li><a class="waves-effect" href="project-2.html" target="_blank">Projet 2</a></li>
-      <li><a class="waves-effect" href="project-3.html" target="_blank">Projet 3</a></li>
+      <li><a class="waves-effect" href="index.php"><i class="material-icons">home</i>Acceuil</a></li>
+      <li><a class="waves-effect" href="project-1.php" target="_blank">Projet 1</a></li>
+      <li><a class="waves-effect" href="project-2.php" target="_blank">Projet 2</a></li>
+      <li><a class="waves-effect" href="project-3.php" target="_blank">Projet 3</a></li>
       <!-- Dropdown Trigger -->
       <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Couleur<i class="material-icons right">arrow_drop_down</i></a></li>
     </ul>

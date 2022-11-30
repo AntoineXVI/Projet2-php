@@ -1,5 +1,12 @@
 <!DOCTYPE html>
-<?php require_once "config.php"; ?>
+<?php require_once "config.php"; 
+
+if(!isset($_SESSION['user']['admin']) || $_SESSION['user']['admin']==0){
+  header('Location: index.php');
+  exit();
+}
+
+?>
 <html>
   <head>
     <!--Import Google Icon Font-->
@@ -15,18 +22,24 @@
     <?php require "menu.php"; ?>
 
     <h1>Liste des utilisateurs</h1>
-   <?php
-   $sql = "SELECT * FROM user"; 
-   $pre = $pdo->prepare($sql); 
-   $pre->execute();
-   $data = $pre->fetchAll(PDO::FETCH_ASSOC);
-   
-   foreach($data as $user){ ?>
-   <div class="bloc_user">
-     <h2><?php echo $user['first_name']." ".$user['last_name'] ?></h2>
-     <span class="email"><?php echo $user['email'] ?></span>
-   </div>
-   <?php } ?>
+    <?php
+    $sql = "SELECT * FROM user"; 
+    $pre = $pdo->prepare($sql); 
+    $pre->execute();
+    $data = $pre->fetchAll(PDO::FETCH_ASSOC);
+    
+    foreach($data as $user){ ?>
+    <div class="bloc_user">
+      <h2><?php echo $user['name'] ?></h2>
+      <span class="email"><?php echo $user['email'] ?></span>
+    </div>
+    <?php } ?>
+
+    <form method="post" action="action/update_user.php">
+    <input type='name' name='name' value="<?php echo "$_POST ['name']"?>" />
+    <input type='hidden' name='id' value="<?php echo "$_POST ['id']"?>" />
+    <input type='submit' value='Modifier' />
+</form>
 
     <div class="carousel carousel-slider center">
       <div class="carousel-item background1 white-text" href="#one!">
