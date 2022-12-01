@@ -1,9 +1,9 @@
 <?php require_once "../config.php";
 
-$sql = "UPDATE projects SET name = :name WHERE id = :id"; 
+$sql = "UPDATE projects SET h1 = :h1 WHERE id = :id"; 
 $dataBinded=array(
     ':id'=> $_POST['id'],
-    ':name'=> $_POST['name'],
+    ':h1'=> $_POST['h1'],
 );
 $pre = $pdo->prepare($sql); 
 $pre->execute($dataBinded);

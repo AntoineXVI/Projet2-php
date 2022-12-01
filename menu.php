@@ -12,9 +12,9 @@
     <a href="#!" class="brand-logo">Nos projets</a>
     <ul class="right hide-on-med-and-down">
         <li><a href="index.php"><i class="material-icons">home</i>Acceuil</a></li>
-        <li><a href="project-1.php"  >Projet 1</a></li>
-        <li><a href="project-2.php" >Projet 2</a></li>
-        <li><a href="project-3.php" >Projet 3</a></li>
+        <li><a href="projet1.php"  >Projet 1</a></li>
+        <li><a href="projet2.php" >Projet 2</a></li>
+        <li><a href="projet3.php" >Projet 3</a></li>
         <!-- Dropdown Trigger -->
         <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Couleur<i class="material-icons right">arrow_drop_down</i></a></li>
         <?php

@@ -1,13 +1,13 @@
-<?php require_once "../config.php";
+<?php require_once "../config.php"; 
 
-$sql = "UPDATE projects SET name = :name WHERE id = :id"; 
+$sql = "DELETE FROM user WHERE id = :id";
 $dataBinded=array(
     ':id'=> $_POST['id'],
-    ':name'=> $_POST['name'],
 );
-$pre = $pdo->prepare($sql); 
+$pre = $pdo->prepare($sql);
 $pre->execute($dataBinded);
 
 header('Location:../admin.php');//on le redirige sur la page d'admin du site !
 exit();
+
 ?>

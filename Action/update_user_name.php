@@ -1,6 +1,6 @@
 <?php require_once "../config.php";
 
-$sql = "UPDATE projects SET name = :name WHERE id = :id"; 
+$sql = "UPDATE user SET name = :name WHERE id = :id"; 
 $dataBinded=array(
     ':id'=> $_POST['id'],
     ':name'=> $_POST['name'],

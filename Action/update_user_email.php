@@ -1,9 +1,9 @@
 <?php require_once "../config.php";
 
-$sql = "UPDATE projects SET name = :name WHERE id = :id"; 
+$sql = "UPDATE user SET email = :email WHERE id = :id"; 
 $dataBinded=array(
     ':id'=> $_POST['id'],
-    ':name'=> $_POST['name'],
+    ':email'=> $_POST['email'],
 );
 $pre = $pdo->prepare($sql); 
 $pre->execute($dataBinded);
