@@ -56,13 +56,13 @@ if(!isset($_SESSION['user']['admin']) || $_SESSION['user']['admin']==0){
     foreach($data as $projects){ ?>
     <div class="bloc_user">
       <h2><?php echo $projects['name'] ?></h2>
-      <form method="post" action="action/update_project.php">
+      <form method="post" action="action/update_projects.php">
         <input type='name' name='name' placeholder="nouveau nom"/>
         <input type='hidden' name='id' />
         <input type='submit' value='Modifier' />
       </form>
       <span class="name"><?php echo $projects['h1'] ?></span>
-      <form method="post" action="action/update_project.php">
+      <form method="post" action="action/update_projects.php">
         <input type='name' name='h1' placeholder="nouveau titre"/>
         <input type='hidden' name='id' />
         <input type='submit' value='Modifier' />
@@ -70,12 +70,12 @@ if(!isset($_SESSION['user']['admin']) || $_SESSION['user']['admin']==0){
     </div>
     <?php } ?>
 
+    
     <h1>creer un projet</h1>
-    <form method="post" action="action/create_project.php">
+    <form method="post" action="action/create_projects.php" enctype="multipart/form-data">
     <input type='name' name='name' placeholder="Entrez le nom" />
     <input type='name' name='h1' placeholder="Entrez un titre"/>
-    <form method="post" action="upload_file.php" enctype="multipart/form-data">
-    <input type='file' name='image' value="null">
+    <input type='file' name='img'/>
     <input type='submit' value='creer projet' />
   </form>
 

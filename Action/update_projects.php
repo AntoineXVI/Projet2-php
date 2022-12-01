@@ -1,8 +1,12 @@
 <?php require_once "../config.php";
 
-$sql = "UPDATE name FROM projects WHERE id=$_POST ['id']"; 
+$sql = "UPDATE projects SET name=:name WHERE id=:id"; 
+$dataBinded=array(
+    ':id'=> $_POST['id'],
+    ':name'=> $_POST['name'],
+);
 $pre = $pdo->prepare($sql); 
-$pre->execute();
+$pre->execute($dataBinded);
 $user = $pre->fetch(PDO::FETCH_ASSOC);
 
 ?>
