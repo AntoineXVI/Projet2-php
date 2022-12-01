@@ -20,7 +20,7 @@ if(!isset($_SESSION['user']['admin']) || $_SESSION['user']['admin']==0){
   <body id="color">
 
     <?php require "menu.php"; ?>
-
+    <h2><a href='index.php' >retour index</a></h2>
     <h1>Liste des utilisateurs</h1>
     <?php
     $sql = "SELECT * FROM user"; 
